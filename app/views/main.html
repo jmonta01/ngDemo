@@ -1,0 +1,31 @@
+<div ng-controller="ApDemoCtrl as demoCtrl">
+
+  <h1>{{demoCtrl.message}}</h1>
+
+  <ap-demo-output value="demoCtrl.nameInput"></ap-demo-output>
+  <ap-demo-manual-input value="demoCtrl.nameInput"></ap-demo-manual-input>
+
+  <ap-demo-output value="demoCtrl.nameSelection1"></ap-demo-output>
+  <ap-demo-list-input options="demoCtrl.options1" selection="demoCtrl.nameSelection1"></ap-demo-list-input>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h3><i class="fa fa-smile-o"></i> Hello {{demoCtrl.nameSelection2 | apDemoFilter}} </h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <form role="form">
+        <div class="form-group">
+          <label for="nameList2">Select from this api populated list:</label>
+          <select id="nameList2" class="form-control" ng-model="demoCtrl.nameSelection2"
+                  ng-options="user.fullName for user in demoCtrl.options2">
+            <option value="">-- choose a name --</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

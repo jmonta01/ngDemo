@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form role="form">
+      <div class="form-group">
+        <label for="nameList1">Select from this api populated list:</label>
+        <select id="nameList1" class="form-control" ng-model="selection"
+                ng-options="user.fullName for user in options">
+        </select>
+      </div>
+    </form>
+  </div>
+</div>
